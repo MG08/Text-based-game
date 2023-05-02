@@ -78,14 +78,26 @@ while choice != "quit": #game loop------------------------------------
             print("I don't understand that.")
             
     elif room == 9:
-        choice = input("You are in room 9. You can go North.")
+        choice = input("You are in room 9. You can go North or South")
         if choice == "North" or choice == "north":
             room = 8
+        if choice == "South" or choice == "south":
+            room = 11
         else:
             print("I don't understand that.")
             
     elif room == 10:
-        choice = input("You are in room 10.")
-
+        choice = input("You are in room 10. You can go North, East, or South.")
+        if choice == "East" or choice == "east":
+            room = 12
+        if choice == "South" or choice == "south":
+            room = 8
+        if choice == "North" or choice == "north":
+            room = 7
+            
+    elif room == 11:
+        choice = input("You are in room 11. You can go North.")
+        if choice == "North" or choice == "north":
+            room = 9
 #end pf game loop
 print("Thanks for playing. Goodbye.")
