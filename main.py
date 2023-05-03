@@ -1,3 +1,4 @@
+inventory = ["","","","",""]
 room = 1
 choice = "hi"
 print("welcome to the text based game!")
@@ -99,5 +100,18 @@ while choice != "quit": #game loop------------------------------------
         choice = input("You are in room 11. You can go North.")
         if choice == "North" or choice == "north":
             room = 9
+            
+    elif room == 12:
+        choice = input("You are in room 11. You can go West or East.")
+        if choice == "West" or choice == "west":
+            room = 10
+        if choice == "East" or choice == "east":
+            room = 13
+            
+    elif room == 13:
+        choice = input("You are in room 11. You can go West.")
+        if choice == "West" or choice == "west":
+            room = 12
+        
 #end pf game loop
 print("Thanks for playing. Goodbye.")
