@@ -15,7 +15,7 @@ while choice != "quit": #game loop------------------------------------
             
     elif room == 2:
         choice = input("You enter the room...There's nothing out of the ordinary in this room either, except those weird dark humanid looking statues beside each other... You can either enter the left door or the right door in this room. Which one do you want to enter?")
-        if choice == "West" or choice == "west":
+        if choice == "Back" or choice == "back":
             room = 1
         if choice == "Right" or choice == "right":
             if inventory[0] == "key":
@@ -38,10 +38,10 @@ while choice != "quit": #game loop------------------------------------
             print("I dont understand that.")
             
     elif room == 4:
-        choice = input("You enter the room, a large clock on the left with a door on the right. There’s a window right in front of you. Enter the right door?")
+        choice = input("You enter the room, a large clock on the left with a door on the right. There’s a window right in front of you. Enter the right door?(You can go back)")
         if choice == "Right" or choice == "right":
             room = 6
-        if choice == "South" or choice == "south":
+        if choice == "Back" or choice == "back":
             room = 2
         else:
             print("I don't understand that.")
