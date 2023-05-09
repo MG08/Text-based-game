@@ -1,8 +1,8 @@
 inventory = ["","","","",""]
-room = 1
+room = 2
 choice = "hi"
 print("welcome to the text based game!")
-
+power=False
 while choice != "quit": #game loop------------------------------------
     if room == 1:
         choice = input("There's a door in front of you. Enter it?")
@@ -17,13 +17,13 @@ while choice != "quit": #game loop------------------------------------
         choice = input("You enter the room...There's nothing out of the ordinary in this room either, except those weird dark humanid looking statues beside each other... You can either enter the left door or the right door in this room. Which one do you want to enter?")
         if choice == "Back" or choice == "back":
             room = 1
-        if choice == "Right" or choice == "right":
+        elif choice == "Right" or choice == "right":
             if inventory[0] == "key":
                 print("The door unlocks, you go in...")
-            room = 3
-            elif inventory[0] != "key":
+                room = 3
+            if inventory[0] != "key":
                 print("The door doesn't budge, it looks like it's locked.")
-        if choice == "Left" or choice == "left":
+        elif choice == "Left" or choice == "left":
             room = 4
         else:
             print("I don't understand that.")
@@ -56,19 +56,30 @@ while choice != "quit": #game loop------------------------------------
             print("I don't understand that.")
             
     elif room == 6:
+        if power == True:
+            print("Oh what is that, I think its a key!")
+            inventory[0]="key"
+            print("Inventory :")
+            print(inventory)
         choice = input("You are in room 6. You can go West or East.")
+        
         if choice == "West" or choice == "west":
             room = 4
-        if choice == "East" or choice == "east":
+        elif choice == "East" or choice == "east":
             room = 7
+        
         else:
             print("I don't understand that.")
             
     elif room == 7:
         choice = input("You are in room 7. You can go West or South.")
-        if choice == "West" or choice == "west":
+        if choice == "Yes":
+            power = True
+            print("You fixed the power")
+            print(power)
+        elif choice == "West" or choice == "west":
             room = 6
-        if choice == "South" or choice == "south":
+        elif choice == "South" or choice == "south":
             room = 10
         else:
             print("I don't understand that.")
