@@ -72,7 +72,7 @@ while choice != "quit": #game loop------------------------------------
             print("I don't understand that.")
             
     elif room == 7:
-        choice = input("You are in room 7. You can go West or South.")
+        choice = input("You are in room 7. You can go West or South. You can see a fuse box. ")
         if choice == "Yes":
             power = True
             print("You fixed the power")
